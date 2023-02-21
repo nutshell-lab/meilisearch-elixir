@@ -12,7 +12,7 @@ by adding `meilisearch` to your list of dependencies in `mix.exs`:
 ```elixir
 def deps do
   [
-    {:meilisearch, "~> 0.25.2"}
+    {:meilisearch, "~> 0.25.0", git: "https://github.com/nutshell-lab/meilisearch-elixir"}
   ]
 end
 ```
@@ -21,10 +21,10 @@ end
 
 ```elixir
 # Create Index
-Meilisearch.Index.create("index_name")
+Meilisearch.Indexes.create("index_name")
 
 # Create Index and set primary key
-Meilisearch.Index.create("index_name", primary_key: "key_name")
+Meilisearch.Indexes.create("index_name", primary_key: "key_name")
 
 # Insert documents
 documents = [
